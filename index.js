@@ -17,13 +17,18 @@
   // })
 
   // Atualiza dados
-  
-  const updatePlanets = await Planet.findByPk(2)
-  
-  updatePlanets.name = 'Vênus'
 
-  await updatePlanets.save()
+  // const updatePlanets = await Planet.findByPk(2)
+  
+  // updatePlanets.name = 'Vênus'
 
-  console.log(updatePlanets)
+  // await updatePlanets.save()
+
+  //  Deleta dados
+  const deletePlanets = await Planet.findByPk(3)
+
+  await deletePlanets.destroy()
+
+  console.log(deletePlanets)
 
 })();
